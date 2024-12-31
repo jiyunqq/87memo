@@ -1,0 +1,9 @@
+.wy-nav-content {
+    max-width: 97%;
+}
+
+.red {color: red;}
+.green {color:green}
+.blue {color: blue;}
+.strike {text-decoration: line-through}  /* 删除线 */
+.under {text-decoration: solid underline purple 2px}  /* 下划线 */
