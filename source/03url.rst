@@ -8,3 +8,7 @@
 rpm 下载                 | https://pkgs.org/
                          | https://rpmfind.net/
 ======================  =============================================================
+
+#. css
+
+   - github-markdown-css https://cdnjs.com/libraries/github-markdown-css/0.1.0
