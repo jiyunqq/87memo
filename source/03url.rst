@@ -9,6 +9,7 @@ rpm 下载                 | https://pkgs.org/
                          | https://rpmfind.net/
 ======================  =============================================================
 
-#. css
-
-   - github-markdown-css https://cdnjs.com/libraries/github-markdown-css/0.1.0
+======================  =============================================================
+github-markdown-css     https://cdnjs.com/libraries/github-markdown-css/0.1.0
+nginx                   https://nginx.org/packages/centos/7/x86_64/RPMS/
+======================  =============================================================
