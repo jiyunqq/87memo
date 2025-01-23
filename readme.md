@@ -2,12 +2,16 @@
 
 #### 介绍
 
-sphinx-doc 写的文档
+sphinx-doc 写的备忘录
 
+#### git 操作
+
+```bash
 git clone git@gitee.com:jiyunqq/87memo.git
 
-#### 软件架构
-软件架构说明
+git remote add github git@github.com:jiyunqq/87memo.git
+git push --force github master
+```
 
 #### 安装教程
 

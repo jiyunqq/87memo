@@ -1,0 +1,42 @@
+name: Deploy Sphinx Docs
+
+# 当主分支有推送或 PR 合并时触发
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    # 使用 Ubuntu 作为运行环境
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 检出代码仓库
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. 设置 Python 环境
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    # 3. 安装依赖
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx sphinx-rtd-theme myst-parser jieba  # 安装 Sphinx 和主题
+        # 如果有额外需求，比如扩展，可以在此处增加安装命令
+
+    # 4. 构建 Sphinx 文档
+    - name: Build documentation
+      run: |
+        make -C . html  # 进入 docs 目录并构建文档
+
+    # 5. 部署到 GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的令牌
+        publish_dir: build/html  # 指定构建后的 HTML 文档目录
