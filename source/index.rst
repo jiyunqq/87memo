@@ -13,3 +13,4 @@
    02checksum.rst
    03url.rst
    04download.rst
+   05busid.rst
