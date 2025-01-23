@@ -11,6 +11,11 @@ git clone git@gitee.com:jiyunqq/87memo.git
 
 git remote add github git@github.com:jiyunqq/87memo.git
 git push --force github master
+
+git push github master
+git branch -avv                               # 查看当前分支设置的上游分支
+git branch --set-upstream-to=origin/master    # 设置上游分支
+
 ```
 
 #### 安装教程
