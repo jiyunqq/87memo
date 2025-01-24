@@ -1,8 +1,3 @@
-.. 02tmp documentation master file, created by
-   sphinx-quickstart on Mon Jul  6 21:59:48 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 87memo
 =================================
 
@@ -14,3 +9,4 @@
    03url.rst
    04download.rst
    05busid.rst
+   06flops.rst

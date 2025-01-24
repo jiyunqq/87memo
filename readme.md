@@ -2,7 +2,7 @@
 
 #### 介绍
 
-sphinx-doc 写的备忘录
+sphinx-doc 写的备忘录 https://jiyunqq.github.io/87memo/ || https://87memo.readthedocs.io/
 
 #### git 操作
 
