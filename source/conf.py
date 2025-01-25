@@ -35,9 +35,12 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autosummary',
+    'sphinx_copybutton',
     'sphinx.ext.autosectionlabel',
     'myst_parser',
 ]
+
+copybutton_selector = "div.highlight pre"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
