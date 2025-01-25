@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>06flops gpu卡 FP32 FP64 性能比较 &mdash; 87memo 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/my.css?v=d0fb6045" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f115507d"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="05busid 故障 gpu 显卡槽位" href="05busid.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            87memo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01repository.html">01repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02checksum.html">02checksum 校验</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03url.html">03url</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04download.html">04download 常用下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05busid.html">05busid 故障 gpu 显卡槽位</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">06flops gpu卡 FP32 FP64 性能比较</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">87memo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">06flops gpu卡 FP32 FP64 性能比较</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/06flops.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flops-gpu-fp32-fp64">
+<h1>06flops gpu卡 FP32 FP64 性能比较<a class="headerlink" href="#flops-gpu-fp32-fp64" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line">FP32: 单精度浮点计算能力</div>
+<div class="line">FP64: 双精度浮点计算能力</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>gpu卡</p></td>
+<td><p>FP32(TFLOPS)</p></td>
+<td><p>FP64(TFLOPS)</p></td>
+<td><p>架构 architecture</p></td>
+</tr>
+<tr class="row-even"><td><p>3080ti</p></td>
+<td><p>34.1</p></td>
+<td><p>0.533</p></td>
+<td><p>Ampere</p></td>
+</tr>
+<tr class="row-odd"><td><p>3090</p></td>
+<td><p>35.58</p></td>
+<td><p>0.556</p></td>
+<td><p>Ampere</p></td>
+</tr>
+<tr class="row-even"><td><p>4090</p></td>
+<td><p>82.58</p></td>
+<td><p>1.29</p></td>
+<td><p>Ada Lovelace</p></td>
+</tr>
+<tr class="row-odd"><td><p>a100</p></td>
+<td><p>19.5</p></td>
+<td><p>9.7</p></td>
+<td><p>Ampere</p></td>
+</tr>
+<tr class="row-even"><td><p>a10</p></td>
+<td><p>31.24</p></td>
+<td><p>0.976</p></td>
+<td><p>Ampere</p></td>
+</tr>
+<tr class="row-odd"><td><p>a40</p></td>
+<td><p>37.420</p></td>
+<td><p>1.168</p></td>
+<td><p>Ampere</p></td>
+</tr>
+<tr class="row-even"><td><p>L40</p></td>
+<td><p>90.516</p></td>
+<td><p>1.414</p></td>
+<td><p>Ada Lovelace</p></td>
+</tr>
+<tr class="row-odd"><td><p>a800</p></td>
+<td><p>19.5</p></td>
+<td><p>9.7</p></td>
+<td><p>Ampere</p></td>
+</tr>
+<tr class="row-even"><td><p>T400</p></td>
+<td></td>
+<td></td>
+<td><p>Turing</p></td>
+</tr>
+<tr class="row-odd"><td><p>p100</p></td>
+<td></td>
+<td></td>
+<td><p>Pascal</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">在 GPU 的性能比较中, <span class="blue">FP32(单精度浮点运算)通常是更为关键和普遍关注</span> 的一个性能指标.</div>
+<div class="line">FP32 主要用于深度学习、图形渲染等许多计算密集型任务，</div>
+<div class="line">因此在这些领域中, FP32 算力通常被广泛用来评估 GPU 的性能。</div>
+</div>
+<p>而 FP64 主要在科学计算、数值模拟等需要更高精度计算的领域才会被重点关注</p>
+<p>对于大多数应用来说, FP32 已经足够满足精度要求, 并且可以获得更高的计算效率和更低的功耗.</p>
+<p>对于对精度要求极高的应用, 例如科学计算、金融模拟等, 则需要使用 FP64 来保证计算结果的准确性.</p>
+<div class="line-block">
+<div class="line">Ada Lovelace 和 Hopper 是同一代架构, 只是分别供货给超算领域和消费级市场</div>
+<div class="line">消费级芯片会带有 RT Core, 这些处理器在 Data Center 是用不上的</div>
+<div class="line">所以是同一代制程工艺、架构设计, 微调衍生出来的2个变种。</div>
+</div>
+<ol class="arabic">
+<li><p>显卡架构信息(以每代架构中最强显卡的参数为代表)</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>计算能力</p></th>
+<th class="head"><p>架构</p></th>
+<th class="head"><p>发布年代</p></th>
+<th class="head"><p>Cores/SM</p></th>
+<th class="head"><p>总 SM 数</p></th>
+<th class="head"><p>CUDA Cores</p></th>
+<th class="head"><p>L1 Cache(KB)</p></th>
+<th class="head"><p>L2 Cache(KB)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1.0</p></td>
+<td><p>Tesla</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2.0</p></td>
+<td><p>Fermi</p></td>
+<td><p>2009</p></td>
+<td><p>32</p></td>
+<td><p>16 SM</p></td>
+<td><p>512</p></td>
+<td><p>48</p></td>
+<td><p>768</p></td>
+</tr>
+<tr class="row-even"><td><p>3.0</p></td>
+<td><p>Kepler</p></td>
+<td><p>2012</p></td>
+<td><p>192</p></td>
+<td><p>15 SMX</p></td>
+<td><p>2880</p></td>
+<td><p>48</p></td>
+<td><p>1536</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.0</p></td>
+<td><p>—</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5.0</p></td>
+<td><p>Maxwell</p></td>
+<td><p>2014</p></td>
+<td><p>128</p></td>
+<td><p>24 SMM</p></td>
+<td><p>3072</p></td>
+<td><p>96</p></td>
+<td><p>2048</p></td>
+</tr>
+<tr class="row-odd"><td><p>6.0</p></td>
+<td><p>Pascal</p></td>
+<td><p>2016</p></td>
+<td><p>64</p></td>
+<td><p>60 SM</p></td>
+<td><p>3840</p></td>
+<td><p>64</p></td>
+<td><p>4096</p></td>
+</tr>
+<tr class="row-even"><td><p>7.0</p></td>
+<td><p>Volta</p></td>
+<td><p>2018</p></td>
+<td><p>648 个 Tensor Core</p></td>
+<td><p>80 SM</p></td>
+<td><p>5120</p></td>
+<td><p>与共享内存共用 128(最多 96)</p></td>
+<td><p>6144</p></td>
+</tr>
+<tr class="row-odd"><td><p>7.5</p></td>
+<td><p>Turing</p></td>
+<td><p>2018</p></td>
+<td><p>648 个 Tensor Core</p></td>
+<td><p>72 SM</p></td>
+<td><p>4608</p></td>
+<td><p>与共享内存共用 128(最多 96)</p></td>
+<td><p>6144</p></td>
+</tr>
+<tr class="row-even"><td><p>8.0</p></td>
+<td><p>Ampere</p></td>
+<td><p>2020</p></td>
+<td><p>648 个 Tensor Core</p></td>
+<td><p>108 SM</p></td>
+<td><p>6912</p></td>
+<td><p>与共享内存共用 192(最多 164)</p></td>
+<td><p>40960</p></td>
+</tr>
+<tr class="row-odd"><td><p>9.0</p></td>
+<td><p>Hopper</p></td>
+<td><p>2022</p></td>
+<td><p>1284 个 Tensor Core</p></td>
+<td><p>144 SM</p></td>
+<td><p>18432</p></td>
+<td><p>与共享内存共用 256</p></td>
+<td><p>61440</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<ul>
+<li><p>从 Turing 开始出现了半代计算能力的区别, 实际上 Turing(7.5) 是 Volta(7.0) 的小改款. (Turing 架构 = Volta 架构 - FP64 + RT Cores)</p></li>
+<li><div class="line-block">
+<div class="line">在 Ampere 这一代上也有这种区别, 计算能力 8.0 对应最早的企业级显卡核心(GA100),</div>
+<div class="line">8.6 对应之后的消费级核心(GA102、GA104、GA106、GA107), 虽然 8.6 没有获得一个额外的架构命名.</div>
+</div>
+</li>
+<li><p>Hopper 架构上, 不出意外也会有半代计算能力的区别——这实质上是 Data Center 核心和消费级核心的区别.</p></li>
+</ul>
+</div>
+</li>
+<li><p>Ampere 常用显卡的可用 SM 数量</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>显卡型号</p></th>
+<th class="head"><p>3060</p></th>
+<th class="head"><p>3060Ti</p></th>
+<th class="head"><p>3070</p></th>
+<th class="head"><p>3070Ti</p></th>
+<th class="head"><p>3080</p></th>
+<th class="head"><p>3080Ti</p></th>
+<th class="head"><p>3090</p></th>
+<th class="head"><p>3090Ti</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SM 数量</p></td>
+<td><p>28</p></td>
+<td><p>38</p></td>
+<td><p>46</p></td>
+<td><p>48</p></td>
+<td><p>68</p></td>
+<td><p>80</p></td>
+<td><p>82</p></td>
+<td><p>84</p></td>
+</tr>
+<tr class="row-odd"><td><p>显存</p></td>
+<td><p>12 GB</p></td>
+<td><p>8 GB</p></td>
+<td><p>8 GB</p></td>
+<td><p>8 GB</p></td>
+<td><p>10 GB</p></td>
+<td><p>12 GB</p></td>
+<td><p>24 GB</p></td>
+<td><p>24 GB</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>显卡架构参考</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>显卡架构</p></th>
+<th class="head"><p>参考</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ada Lovelace</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture">https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ampere</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ampere_(microarchitecture">https://en.wikipedia.org/wiki/Ampere_(microarchitecture</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Hopper</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hopper_(microarchitecture">https://en.wikipedia.org/wiki/Hopper_(microarchitecture</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Turing</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Turing_(microarchitecture">https://en.wikipedia.org/wiki/Turing_(microarchitecture</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Volta</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Volta_(microarchitecture">https://en.wikipedia.org/wiki/Volta_(microarchitecture</a>)</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>参考</p></li>
+</ol>
+<p><a class="reference external" href="https://www.nvidia.com/en-us/data-center/a100/">https://www.nvidia.com/en-us/data-center/a100/</a> 官方 a100 规格参数 Specifications</p>
+<p><a class="reference external" href="https://www.nvidia.com/en-us/design-visualization/a800/">https://www.nvidia.com/en-us/design-visualization/a800/</a> 官方 a800 规格参数 Specifications</p>
+<p><a class="reference external" href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/">https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/</a> 官方 3080ti 规格参数 Specs</p>
+<p><a class="reference external" href="https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/">https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/</a> 官方 3090 规格参数 Specs</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/</a> 官方 4090 规格参数 Specs</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/GeForce_40_series">https://en.wikipedia.org/wiki/GeForce_40_series</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/GeForce_30_series">https://en.wikipedia.org/wiki/GeForce_30_series</a>  维基收录 3080ti 3090 4090 a100 规格参数</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/GeForce_40_series">https://en.wikipedia.org/wiki/GeForce_40_series</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ampere_(microarchitecture)#A100_accelerator_and_DGX_A100">A100</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Nvidia_Tesla">A10、L40、A40</a></p></li>
+</ul>
+<p><a class="reference external" href="https://www.twisted-meadows.com/nvidia-gpu-architecture/">https://www.twisted-meadows.com/nvidia-gpu-architecture/</a> nvidia 显卡架构详解</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Volta_(microarchitecture)#Products">p100 v100 a100 h100 b100 对比</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="05busid.html" class="btn btn-neutral float-left" title="05busid 故障 gpu 显卡槽位" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, jiyun。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

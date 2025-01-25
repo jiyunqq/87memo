@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>05busid 故障 gpu 显卡槽位 &mdash; 87memo 1.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/my.css?v=d0fb6045" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f115507d"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="06flops gpu卡 FP32 FP64 性能比较" href="06flops.html" />
+    <link rel="prev" title="04download 常用下载" href="04download.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            87memo
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01repository.html">01repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02checksum.html">02checksum 校验</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03url.html">03url</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04download.html">04download 常用下载</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">05busid 故障 gpu 显卡槽位</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06flops.html">06flops gpu卡 FP32 FP64 性能比较</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">87memo</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">05busid 故障 gpu 显卡槽位</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/05busid.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="busid-gpu">
+<h1>05busid 故障 gpu 显卡槽位<a class="headerlink" href="#busid-gpu" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><p>执行命令 <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fri</span> <span class="n">Aug</span> <span class="mi">16</span> <span class="mi">15</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">10</span> <span class="mi">2024</span>
+<span class="o">+-----------------------------------------------------------------------------------------+</span>
+<span class="o">|</span> <span class="n">NVIDIA</span><span class="o">-</span><span class="n">SMI</span> <span class="mf">550.76</span>                 <span class="n">Driver</span> <span class="n">Version</span><span class="p">:</span> <span class="mf">550.76</span>         <span class="n">CUDA</span> <span class="n">Version</span><span class="p">:</span> <span class="mf">12.4</span>     <span class="o">|</span>
+<span class="o">|-----------------------------------------+------------------------+----------------------+</span>
+<span class="o">|</span> <span class="n">GPU</span>  <span class="n">Name</span>                 <span class="n">Persistence</span><span class="o">-</span><span class="n">M</span> <span class="o">|</span> <span class="n">Bus</span><span class="o">-</span><span class="n">Id</span>          <span class="n">Disp</span><span class="o">.</span><span class="n">A</span> <span class="o">|</span> <span class="n">Volatile</span> <span class="n">Uncorr</span><span class="o">.</span> <span class="n">ECC</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">Fan</span>  <span class="n">Temp</span>   <span class="n">Perf</span>          <span class="n">Pwr</span><span class="p">:</span><span class="n">Usage</span><span class="o">/</span><span class="n">Cap</span> <span class="o">|</span>           <span class="n">Memory</span><span class="o">-</span><span class="n">Usage</span> <span class="o">|</span> <span class="n">GPU</span><span class="o">-</span><span class="n">Util</span>  <span class="n">Compute</span> <span class="n">M</span><span class="o">.</span> <span class="o">|</span>
+<span class="o">|</span>                                         <span class="o">|</span>                        <span class="o">|</span>               <span class="n">MIG</span> <span class="n">M</span><span class="o">.</span> <span class="o">|</span>
+<span class="o">|=========================================+========================+======================|</span>
+<span class="o">|</span>   <span class="mi">0</span>  <span class="n">NVIDIA</span> <span class="n">GeForce</span> <span class="n">RTX</span> <span class="mi">4090</span> <span class="n">D</span>      <span class="n">On</span>  <span class="o">|</span>   <span class="mi">00000000</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">Off</span> <span class="o">|</span>                  <span class="n">Off</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">0</span><span class="o">%</span>   <span class="mi">45</span><span class="n">C</span>    <span class="n">P8</span>             <span class="mi">25</span><span class="n">W</span> <span class="o">/</span>  <span class="mi">425</span><span class="n">W</span> <span class="o">|</span>       <span class="mi">2</span><span class="n">MiB</span> <span class="o">/</span>  <span class="mi">24564</span><span class="n">MiB</span> <span class="o">|</span>      <span class="mi">0</span><span class="o">%</span>      <span class="n">Default</span> <span class="o">|</span>
+<span class="o">|</span>                                         <span class="o">|</span>                        <span class="o">|</span>                  <span class="n">N</span><span class="o">/</span><span class="n">A</span> <span class="o">|</span>
+<span class="o">+-----------------------------------------+------------------------+----------------------+</span>
+<span class="o">|</span>   <span class="mi">1</span>  <span class="n">NVIDIA</span> <span class="n">GeForce</span> <span class="n">RTX</span> <span class="mi">4090</span> <span class="n">D</span>      <span class="n">On</span>  <span class="o">|</span>   <span class="mi">00000000</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">Off</span> <span class="o">|</span>                  <span class="n">Off</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">0</span><span class="o">%</span>   <span class="mi">37</span><span class="n">C</span>    <span class="n">P8</span>             <span class="mi">20</span><span class="n">W</span> <span class="o">/</span>  <span class="mi">425</span><span class="n">W</span> <span class="o">|</span>       <span class="mi">2</span><span class="n">MiB</span> <span class="o">/</span>  <span class="mi">24564</span><span class="n">MiB</span> <span class="o">|</span>      <span class="mi">0</span><span class="o">%</span>      <span class="n">Default</span> <span class="o">|</span>
+<span class="o">|</span>                                         <span class="o">|</span>                        <span class="o">|</span>                  <span class="n">N</span><span class="o">/</span><span class="n">A</span> <span class="o">|</span>
+<span class="o">+-----------------------------------------+------------------------+----------------------+</span>
+<span class="o">|</span>   <span class="mi">2</span>  <span class="n">NVIDIA</span> <span class="n">GeForce</span> <span class="n">RTX</span> <span class="mi">4090</span> <span class="n">D</span>      <span class="n">On</span>  <span class="o">|</span>   <span class="mi">00000000</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">Off</span> <span class="o">|</span>                  <span class="n">Off</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="mi">0</span><span class="o">%</span>   <span class="mi">40</span><span class="n">C</span>    <span class="n">P8</span>             <span class="mi">17</span><span class="n">W</span> <span class="o">/</span>  <span class="mi">425</span><span class="n">W</span> <span class="o">|</span>       <span class="mi">2</span><span class="n">MiB</span> <span class="o">/</span>  <span class="mi">24564</span><span class="n">MiB</span> <span class="o">|</span>      <span class="mi">0</span><span class="o">%</span>      <span class="n">Default</span> <span class="o">|</span>
+<span class="o">|</span>                                         <span class="o">|</span>                        <span class="o">|</span>                  <span class="n">N</span><span class="o">/</span><span class="n">A</span> <span class="o">|</span>
+<span class="o">+-----------------------------------------+------------------------+----------------------+</span>
+<span class="o">|</span>   <span class="mi">3</span>  <span class="n">NVIDIA</span> <span class="n">GeForce</span> <span class="n">RTX</span> <span class="mi">4090</span> <span class="n">D</span>      <span class="n">On</span>  <span class="o">|</span>   <span class="mi">00000000</span><span class="p">:</span><span class="n">CA</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">Off</span> <span class="o">|</span>                  <span class="n">Off</span> <span class="o">|</span>
+<span class="o">|</span> <span class="mi">30</span><span class="o">%</span>   <span class="mi">44</span><span class="n">C</span>    <span class="n">P2</span>            <span class="mi">223</span><span class="n">W</span> <span class="o">/</span>  <span class="mi">425</span><span class="n">W</span> <span class="o">|</span>   <span class="mi">16108</span><span class="n">MiB</span> <span class="o">/</span>  <span class="mi">24564</span><span class="n">MiB</span> <span class="o">|</span>     <span class="mi">99</span><span class="o">%</span>      <span class="n">Default</span> <span class="o">|</span>
+<span class="o">|</span>                                         <span class="o">|</span>                        <span class="o">|</span>                  <span class="n">N</span><span class="o">/</span><span class="n">A</span> <span class="o">|</span>
+<span class="o">+-----------------------------------------+------------------------+----------------------+</span>
+
+<span class="o">+-----------------------------------------------------------------------------------------+</span>
+<span class="o">|</span> <span class="n">Processes</span><span class="p">:</span>                                                                              <span class="o">|</span>
+<span class="o">|</span>  <span class="n">GPU</span>   <span class="n">GI</span>   <span class="n">CI</span>        <span class="n">PID</span>   <span class="n">Type</span>   <span class="n">Process</span> <span class="n">name</span>                              <span class="n">GPU</span> <span class="n">Memory</span> <span class="o">|</span>
+<span class="o">|</span>        <span class="n">ID</span>   <span class="n">ID</span>                                                               <span class="n">Usage</span>      <span class="o">|</span>
+<span class="o">|=========================================================================================|</span>
+<span class="o">|</span>    <span class="mi">3</span>   <span class="n">N</span><span class="o">/</span><span class="n">A</span>  <span class="n">N</span><span class="o">/</span><span class="n">A</span>     <span class="mi">15863</span>      <span class="n">C</span>   <span class="n">PWmat</span>                                       <span class="mi">16100</span><span class="n">MiB</span> <span class="o">|</span>
+<span class="o">+-----------------------------------------------------------------------------------------+</span>
+</pre></div>
+</div>
+</li>
+<li><p>以序号 <span class="green">3</span> 为例, 记录 3 号显卡 Bus-Id <span class="green">00000000:CA:00.0</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dmidecode</span> <span class="o">-</span><span class="n">t</span> <span class="n">slot</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="mi">10</span> <span class="n">CA</span><span class="p">:</span><span class="mf">00.0</span>
+<span class="n">Handle</span> <span class="mh">0x000D</span><span class="p">,</span> <span class="n">DMI</span> <span class="nb">type</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">17</span> <span class="nb">bytes</span>
+<span class="n">System</span> <span class="n">Slot</span> <span class="n">Information</span>
+    <span class="n">Designation</span><span class="p">:</span> <span class="n">CPU</span> <span class="n">SLOT1</span> <span class="n">PCIe</span> <span class="mf">5.0</span> <span class="n">X16</span>
+    <span class="n">Type</span><span class="p">:</span> <span class="n">x16</span> <span class="o">&lt;</span><span class="n">OUT</span> <span class="n">OF</span> <span class="n">SPEC</span><span class="o">&gt;</span>
+    <span class="n">Current</span> <span class="n">Usage</span><span class="p">:</span> <span class="n">In</span> <span class="n">Use</span>
+    <span class="n">Length</span><span class="p">:</span> <span class="n">Long</span>
+    <span class="n">Characteristics</span><span class="p">:</span>
+            <span class="mf">3.3</span> <span class="n">V</span> <span class="ow">is</span> <span class="n">provided</span>
+            <span class="n">Opening</span> <span class="ow">is</span> <span class="n">shared</span>
+            <span class="n">PME</span> <span class="n">signal</span> <span class="ow">is</span> <span class="n">supported</span>
+    <span class="n">Bus</span> <span class="n">Address</span><span class="p">:</span> <span class="mi">0000</span><span class="p">:</span><span class="n">ca</span><span class="p">:</span><span class="mf">00.0</span>
+</pre></div>
+</div>
+<p>3 号显卡对应服务器主板 PCI插槽槽位是 <span class="blue">Designation: CPU SLOT1 PCIe 5.0 X16</span></p>
+</li>
+</ol>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li><p>gpu 卡对应型号</p></li>
+</ol>
+<p>pci.ids: <a class="reference external" href="https://github.com/pciutils/pciids/blob/master/pci.ids">https://github.com/pciutils/pciids/blob/master/pci.ids</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lspci -nn | grep VGA</span>
+<span class="c1"># lspci | grep NVIDIA</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">VGA</span> <span class="n">compatible</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">Device</span> <span class="mi">2204</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>   <span class="c1"># 3090</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">VGA</span> <span class="n">compatible</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">Device</span> <span class="mi">2208</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>   <span class="c1"># 3080ti</span>
+<span class="mi">1</span><span class="n">a</span><span class="p">:</span><span class="mf">00.0</span> <span class="mi">3</span><span class="n">D</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">GP100GL</span> <span class="p">[</span><span class="n">Tesla</span> <span class="n">P100</span> <span class="n">SXM2</span> <span class="mi">16</span><span class="n">GB</span><span class="p">]</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>   <span class="c1"># p100</span>
+<span class="mi">02</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">VGA</span> <span class="n">compatible</span> <span class="n">controller</span><span class="p">:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">GP102</span> <span class="p">[</span><span class="n">GeForce</span> <span class="n">GTX</span> <span class="mi">1080</span> <span class="n">Ti</span><span class="p">]</span> <span class="p">(</span><span class="n">rev</span> <span class="n">a1</span><span class="p">)</span>   <span class="c1"># 1080ti</span>
+<span class="mi">31</span><span class="p">:</span><span class="mf">00.0</span> <span class="n">VGA</span> <span class="n">compatible</span> <span class="n">controller</span> <span class="p">[</span><span class="mi">0300</span><span class="p">]:</span> <span class="n">NVIDIA</span> <span class="n">Corporation</span> <span class="n">Device</span> <span class="p">[</span><span class="mi">10</span><span class="n">de</span><span class="p">:</span><span class="mi">2684</span><span class="p">]</span>  <span class="c1"># NVIDIA GeForce RTX 4090</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="04download.html" class="btn btn-neutral float-left" title="04download 常用下载" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="06flops.html" class="btn btn-neutral float-right" title="06flops gpu卡 FP32 FP64 性能比较" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, jiyun。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
