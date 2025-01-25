@@ -84,3 +84,19 @@ html_search_language = 'zh'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_theme_options = {
+    'sticky_navigation': True,
+    'includehidden': True,
+    'navigation_depth': 5,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': True,
+}
+
+html_context = {
+    'display_github': True,
+    'github_user': 'jiyunqq',
+    'github_repo': '87memo',
+    'github_version': 'master',
+    'conf_py_path': '/source/',
+}

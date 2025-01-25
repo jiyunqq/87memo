@@ -1,0 +1,19 @@
+{% extends "!breadcrumbs.html" %}
+
+{% block breadcrumbs_aside %}
+{{ super() }}
+
+  <!-- <li class="wy-breadcrumbs-aside">
+    {%- if show_source and has_source and sourcename %}
+    <a href="{{ pathto('_sources/' + sourcename, true)|e }}" target="_blank"> {{ _('View page source') }}</a>
+    <span class="breadcrumb-separator">&nbsp;&nbsp;</span>
+    {%- endif %}
+  </li> -->
+
+  <li class="wy-breadcrumbs-aside">
+    <!-- 在 breadcrumbs 中插入自定义链接 -->
+    <a href="https://jiyunqq.github.io" target="_blank">jiyun</a>
+    <span class="breadcrumb-separator">&nbsp;&nbsp;</span>
+  </li>
+
+{% endblock %}
