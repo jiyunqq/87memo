@@ -5,5 +5,59 @@
 .red {color: red;}
 .green {color:green}
 .blue {color: blue;}
+.byellow {background-color: yellow;}
 .strike {text-decoration: line-through}  /* 删除线 */
 .under {text-decoration: solid underline purple 2px}  /* 下划线 */
+
+/* By default align the sphinx-features one per-row and center them,
+then for larger screens align them two per-row. */
+.sphinx-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.sphinx-feature {
+    flex: 1 1 100%;
+    margin: 0 !important;
+}
+.sphinx-feature p {
+    hyphens: none !important;
+}
+div.sphinx-feature > p.admonition-title {
+    padding-left: 1rem;
+    font-weight: bold;
+}
+div.sphinx-feature > p.admonition-title::before {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sphinx-feature {
+        flex: 0 0 auto;
+        box-sizing: border-box;
+        width: 48%;
+    }
+}
+
+.sphinx-users {
+    text-align: center;
+    font-weight: 500;
+}
+.sphinx-users-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.sphinx-users-logos .headerlink {
+    display: none;
+}
+
+
+
+
+
+
+
+

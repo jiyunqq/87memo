@@ -10,3 +10,4 @@
    04download.rst
    05busid.rst
    06flops.rst
+   07cube.rst

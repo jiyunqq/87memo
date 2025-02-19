@@ -66,6 +66,7 @@ rst_prolog = """
 .. role:: red
 .. role:: green
 .. role:: blue
+.. role:: byellow
 .. role:: strike
 .. role:: under
 """
