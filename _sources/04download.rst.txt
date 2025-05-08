@@ -35,9 +35,6 @@
 #. 其它通用下载
 
    - centos 7.9 系统镜像 https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso
-   - oneapi basekit https://registrationcenter-download.intel.com/akdlm/irc_nas/18673/l_BaseKit_p_2022.2.0.262_offline.sh
-   - oneapi hpckit https://registrationcenter-download.intel.com/akdlm/irc_nas/18679/l_HPCKit_p_2022.2.0.191_offline.sh
-   - oneapi 百度网盘下载链接: https://pan.baidu.com/s/1LkRvy98VJ2e04VB4qczYjQ?pwd=lxkt 提取码: lxkt
    - openssl 下载: https://www.openssl.org/source/old/1.0.1/openssl-1.0.1e.tar.gz
    - openssl 下载: https://www.openssl.org/source/old/1.0.2/openssl-1.0.2u.tar.gz
    - FusionOS 兼容 openssl: compat-openssl10-1.0.2o-3.fos22.u1.x86_64.rpm
@@ -46,6 +43,19 @@
    - xcat-core: https://xcat.org/files/xcat/xcat-core/2.16.x_Linux/xcat-core/xcat-core-2.16.5-linux.tar.bz2
    - xcat-dep: https://xcat.org/files/xcat/xcat-dep/2.x_Linux/xcat-dep-2.16.5-linux.tar.bz2
    - centos 7 改root密码: https://jiyunqq.github.io/soft/single.html
+
+#. oneapi 下载
+
+   - oneapi basekit https://registrationcenter-download.intel.com/akdlm/irc_nas/18673/l_BaseKit_p_2022.2.0.262_offline.sh
+   - oneapi hpckit https://registrationcenter-download.intel.com/akdlm/irc_nas/18679/l_HPCKit_p_2022.2.0.191_offline.sh
+   - oneapi 百度网盘下载链接: https://pan.baidu.com/s/1LkRvy98VJ2e04VB4qczYjQ?pwd=lxkt 提取码: lxkt
+
+   - https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html
+   - https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit-download.html
+
+   - https://hpc.lenovo.com/lico/downloads/7.2.1/Install_Intel_oneAPI.html
+   - https://registrationcenter-download.intel.com/akdlm/IRC_NAS/fdc7a2bc-b7a8-47eb-8876-de6201297144/l_BaseKit_p_2024.1.0.596_offline.sh
+   - https://registrationcenter-download.intel.com/akdlm/IRC_NAS/7f096850-dc7b-4c35-90b5-36c12abd9eaa/l_HPCKit_p_2024.1.0.560_offline.sh
 
 #. 提权漏洞补丁
 
